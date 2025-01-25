@@ -1,0 +1,19 @@
+@use 'tailwindcss' as *;
+
+@mixin button-hover-focus {
+  @apply bg-lime-400 shadow-none ring-red-500 ring-1 ring-offset-2;
+}
+
+.alphabet-container {
+  button {
+    @apply text-sm sm:text-base rounded-md bg-lime-500 text-lime-50 font-medium py-1 px-2 focus:outline-none transition-colors duration-300 cursor-pointer shadow-sm;
+
+    &:hover {
+      @include button-hover-focus;
+    }
+
+    &:focus {
+      @include button-hover-focus;
+    }
+  }
+}
